@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Staggering Beauty + Jumpscare</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Wyświetlanie strony staggeringbeauty.com -->
+  <iframe src="http://www.staggeringbeauty.com/" id="staggering"></iframe>
+
+  <script>
+    // Po 5 sekundach ukrywamy stronę staggeringbeauty.com i pokazujemy jumpscare
+    setTimeout(() => {
+      document.getElementById('staggering').style.display = 'none';
+      window.location.href = 'https://www.youtube.com/watch?v=b98PVbGJz2o'; // Link do filmu z jumpscarem
+    }, 5000); // 5000 ms = 5 sekund
+  </script>
+</body>
+</html>
